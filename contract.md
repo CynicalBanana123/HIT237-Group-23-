@@ -51,6 +51,15 @@ Students should document AI contributions through an AI declaration form, if pro
 ## Provisional Milestones and Checkpoints
 
 ### Task Milestones
+
+| Assessment Title | Learning Outcomes | Due Date |
+|---|---|---|
+| Group Project Report 1 | 1,2,3,4,5,6 | 16/04 |
+| Individual Mid-Semester Test | 1,2,5 | N/A |
+| Group Project Report 2 | 1,2,3,4,5,6 | 28/05 |
+
+This table is an overview of the course's assessments and their respective due dates. Since there are two group projects, each milestone will be the completion of each project at their due date. To ensure that each milestone is achieved successfully, it is important to allocate extra time just in case of delays. One approach to have buffer time is to start working on each milestone as soon as possible. This reduces risks and allows time for contingencies. 
+
 + Setting up a repository and discussing the potential features and progression of the project 
 
 + Creating the skeleton of the project, the main features		 
@@ -61,6 +70,7 @@ Students should document AI contributions through an AI declaration form, if pro
 
 + Preparing to submit the project, final looks 
 ### Task Breakdown
+
 + Debugging: Checking that everything works correctly, not any issues, verifying the project runs as intended. 
 
 + Documenting: General notes for the team, tracking our minutes, reports, anything of that nature. 
