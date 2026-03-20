@@ -60,35 +60,44 @@ Students should document AI contributions through an AI declaration form, if pro
 
 This table is an overview of the course's assessments and their respective due dates. Since there are two group projects, each milestone will be the completion of each project at their due date. To ensure that each milestone is achieved successfully, it is important to allocate extra time just in case of delays. One approach to have buffer time is to start working on each milestone as soon as possible. This reduces risks and allows time for contingencies. 
 
-+ Setting up a repository and discussing the potential features and progression of the project 
+Each group project will follow a process similar to this: 
+1. Setting up a repository and discussing the potential features and progression of the project 
 
-+ Creating the skeleton of the project, the main features		 
+2. Creating the skeleton of the project, the main features		 
 
-+ Developing on the main features, adding and tweaking details 
+3. Developing on the main features, adding and tweaking details 
 
-+ Testing, fixing issues, debugging 
+4. Testing, fixing issues, debugging 
 
-+ Preparing to submit the project, final looks 
+5. Preparing to submit the project e.g. zipping files
+
 ### Task Breakdown
 
-+ Debugging: Checking that everything works correctly, not any issues, verifying the project runs as intended. 
+Tasks for each assignment (milestone) will be broken down by people responsible for each deliverable.
 
-+ Documenting: General notes for the team, tracking our minutes, reports, anything of that nature. 
+**Group Project Report 1 Task Breakdown**
+| Deliverable | People(s) Responsible |
+|---|---|
+| Django Application| Enter names here |
+| Architectual Design Record | Enter names here |
+| Updated project plan and contract | Enter names here |
+| Supplementary Materials | Enter names here |
 
-+ Frontend: Designing the user interface (UI) for the project, such as buttons or any type of menu/design 
+**Group Project Report 2 Task Breakdown**
+| Deliverable | People(s) Responsible |
+|---|---|
+| Extended Django Application| Enter names here |
+| Updated Architectual Design Record | Enter names here |
+| Test Suite | Enter names here |
+| Updated project plan and contract| Enter names here |
+| Updated Supplementary Materials | Enter names here |
 
-+ Backend: Developing the behind-the-scenes core functions for the project. 
+After an MS Team's meeting discussing report 1, students will be assigned to tackle each deliverable based on their strengths and weaknesses and their names will be entered in the table - the same applies to report 2 and its respective table. 
 
-+ Note: (Not sure on specifics/whom) 
 ### Checkpoints
-+ Progress updates in Microsoft Teams, ideally weekly 
 
-+ Reviewing work on a regular time span 
+Checkpoints will be the weekly MS Teams meetings. These checkpoints can be recorded and uploaded to the 'Shared Folder' in case other members weren't able to attend and would like to catch up. Progress reports and any new tasks can be recorded in a meeting minutes document. 
 
-+ Discussing potential delays for the team, changing tasks around if needed 
 ### Integration Points (merging work together)
-+ Individual project components merged regularly for testing 
 
-+ After each feature is finished, establish that everything works as planned with a review 
-
-+ Final review/test before submitting the project, ensuring everything runs smoothly 
+Integration, at least when working on coding projects in VSCode, should be happening constantly everytime code gets updated. This is because the group should be working on the same repository and pushing new data to it, keeping the project up to date. For other work outside of VSCode, work should be integrated together when the weekly meetings are hosted, so that there is live communication if anything goes wrong. After each feature is finished, and the project is finished, each member must test that the project is working and runs smoothly.
