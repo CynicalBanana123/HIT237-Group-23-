@@ -21,15 +21,32 @@ The theme our group selected is theme 3 (remote housing crisis). The table below
 
 ### Group Allocation
 
+If a group member does not contribute to the assignment, it is only fair to report their absence to the lecturer or team facilitator, and they should not be awarded with a grade for the assignment. To the group members that do contribute, grades should be awarded equally as it encourages more collaboration among peers to ensure a better grade is achieved.
+
 ### Communication
+
+All team communication must be done on MS Teams so that all of the group members can be included in the discussion. This prevents group members from missing out on important information. A weekly team meeting or catch-up is necessary to stay organised and ensure that assignments are getting completed. Since communication is done on MS Teams, weekly team meetings will take place on a MS Teams group call.
 
 ### Task Ownership
 
+Task ownership will be assigned in the weekly team meetings and will be documented on a MS Teams post. If a group member is behind on their contribution, it is important to check with them and see if the issue can be resolved e.g. requesting an extension. If the situation is more serious, the lecturer should be notified. To be proactive about a member who isn't contributing, it is encouraged to step in and work on their required task as a team, to ensure that the assignment can be submitted on time. 
+
 ### Diverse Working Styles
+
+As our group consist of both internal and external students, it is understood that each group member works on a different time schedule. As long as students consistently communicate via MS Teams, and respond to each other  within either a few hours or a day, group tasks will be completed successfully. ***Communication is key***. 
 
 ### Conflict Resolution
 
+If the group has any conflict, the lecturuer should be contacted. The lecturer can be contacted at [this email address](mailto:yakub.sebastian@cdu.edu.au) via OutLook or through MS Teams. Messages can be sent via LearnLine, however it should be considered that some lecturers don't respond as quickly on that platform.
+
 ### Academic Integrity
+
+With the use of AI being so prominent in today's day and age, AI should be disclosed if it is used. CDU acknowledges the use of generative AI in academic work, so while it is allowed, students are still required to demonstrate where and how it is used, and will be marked on the appropriateness of its use. Inappropriate use of AI would include but not be limited to using AI to complete the whole assignment, using it where critical thinking is required instead, or submitted AI work as your own work. 
+
+CDU's policy strictly states in ***Section 9(b)vii: declaring and acknowledging use of generative artificial intelligence when creating academic content.***
+CDU's academic policy can be found [here](https://policies.cdu.edu.au/view-current.php?id=50).
+
+Students should document AI contributions through an AI declaration form, if provided. If it's not provided, a dedicated page to AI contributions on an assignment is necessary which should highlight where AI was used.
 
 ## Provisional Milestones and Checkpoints
 
