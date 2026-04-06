@@ -1,0 +1,36 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Create Ticket — Remote Housing</title>
+    <style>
+      body{font-family:Arial,Helvetica,sans-serif;margin:2rem;color:#222}
+      form{max-width:640px;margin-bottom:1.5rem}
+      .ticket{border:1px solid #eee;padding:0.8rem;border-radius:6px;margin-bottom:0.6rem}
+    </style>
+  </head>
+  <body>
+    <h1>Create a Ticket</h1>
+    <p><a href="/">Back to home</a> | <a href="/accounts/logout/">Logout</a></p>
+
+    <form method="post">
+      {% csrf_token %}
+      {{ form.as_p }}
+      <button type="submit">Submit Ticket</button>
+    </form>
+
+    <h2>Your tickets</h2>
+    {% if tickets %}
+      {% for t in tickets %}
+        <div class="ticket">
+          <strong>{{ t.title }}</strong>
+          <div>{{ t.description|linebreaksbr }}</div>
+          <small>Posted {{ t.created_at }}</small>
+        </div>
+      {% endfor %}
+    {% else %}
+      <p>You have not created any tickets yet.</p>
+    {% endif %}
+  </body>
+</html>
