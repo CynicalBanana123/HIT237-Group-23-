@@ -114,10 +114,10 @@
   <header>
     <h1>Ticket Management System</h1>
     <nav>
-      <a href="#">Home</a>
-      <a href="#">View Tickets</a>
-      <a href="#">Create Ticket</a>
-      <a href="#">Contact</a>
+      <a href="/tickets/">Home</a>
+      <a href="/tickets/">View Tickets</a>
+      <a href="{% url 'tickets:create_ticket' %}">Create Ticket</a>
+      <a href="/tickets/contact/">Contact</a>
     </nav>
   </header>
 
@@ -125,27 +125,29 @@
     <section class="hero">
       <h2>Welcome to the Tickets Portal</h2>
       <p>Manage support requests, track ticket progress, and create new tickets easily.</p>
-      <a href="#" class="button">Create a New Ticket</a>
+      <a href="{% url 'tickets:create_ticket' %}" class="button">Create a New Ticket</a>
     </section>
 
     <section class="cards">
-      <div class="card">
-        <h3>Open Tickets</h3>
-        <p>View all currently open support tickets.</p>
-        <a href="#">Go to Open Tickets</a>
-      </div>
-
-      <div class="card">
-        <h3>Closed Tickets</h3>
-        <p>Check previously resolved and archived tickets.</p>
-        <a href="#">View Closed Tickets</a>
-      </div>
-
-      <div class="card">
-        <h3>Create Ticket</h3>
-        <p>Submit a new issue or request for support.</p>
-        <a href="#">Create Ticket</a>
-      </div>
+      {% if tickets %}
+        {% for t in tickets %}
+        <div class="card">
+          <h3>{{ t.title }}</h3>
+          <p>{{ t.description|truncatechars:180 }}</p>
+          <p>
+            <a href="{% url 'tickets:ticket_detail' t.id %}">View</a>
+            &nbsp;|&nbsp;
+            <a href="{% url 'tickets:create_ticket' %}">Create Ticket</a>
+          </p>
+        </div>
+        {% endfor %}
+      {% else %}
+        <div class="card">
+          <h3>No tickets yet</h3>
+          <p>There are no tickets to display. Create the first one.</p>
+          <a href="{% url 'tickets:create_ticket' %}">Create Ticket</a>
+        </div>
+      {% endif %}
     </section>
   </main>
 

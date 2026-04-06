@@ -1,0 +1,31 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>{% block title %}Remote Housing{% endblock %}</title>
+    <style>
+      body { font-family:Arial,Helvetica,sans-serif; margin:2rem; color:#222 }
+      .messages { margin-bottom:1rem }
+      .message { padding:0.6rem; border-radius:4px; margin-bottom:0.4rem }
+      .message.success { background:#e6f4ea; border:1px solid #b7e0c9 }
+    </style>
+  </head>
+  <body>
+    <header>
+      <h1>Remote Housing</h1>
+    </header>
+
+    <div class="messages">
+      {% if messages %}
+        {% for m in messages %}
+          <div class="message {{ m.tags }}">{{ m }}</div>
+        {% endfor %}
+      {% endif %}
+    </div>
+
+    <main>
+      {% block content %}{% endblock %}
+    </main>
+  </body>
+</html>

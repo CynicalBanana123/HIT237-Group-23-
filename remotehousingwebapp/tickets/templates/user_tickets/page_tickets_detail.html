@@ -1,0 +1,28 @@
+{% extends "base.html" %}
+
+{% block title %}Ticket Detail{% endblock %}
+
+{% block content %}
+
+<h1>Ticket Details</h1>
+
+<div style="background: #fff; padding: 1.5rem; border-radius: 8px;">
+
+    <h2>{{ ticket.title }}</h2>
+
+    <p><strong>Description:</strong></p>
+    <p>{{ ticket.description }}</p>
+
+    <p><strong>Priority:</strong> {{ ticket.priority }}</p>
+    <p><strong>Status:</strong> {{ ticket.status }}</p>
+
+    <p><strong>Created By:</strong> {{ ticket.created_by }}</p>
+    <p><strong>Created At:</strong> {{ ticket.created_at }}</p>
+
+</div>
+
+<br>
+
+<a href="{% url 'tickets:ticket_list' %}">← Back to Tickets</a>
+
+{% endblock %}
