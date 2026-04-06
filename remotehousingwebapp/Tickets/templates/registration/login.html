@@ -1,0 +1,22 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Login — Remote Housing</title>
+    <style>body{font-family:Arial,Helvetica,sans-serif;margin:2rem;color:#222}form{max-width:360px}label{display:block;margin-top:.5rem}</style>
+  </head>
+  <body>
+    <h1>Log in</h1>
+    <p>Sign in with your user account. For admin access use the Admin link.</p>
+
+    <form method="post" action=".">
+      {% csrf_token %}
+      {{ form.as_p }}
+      <button type="submit">Log in</button>
+    </form>
+
+    <p><a href="/admin/">Admin login</a></p>
+    <p><a href="/">Back to home</a></p>
+  </body>
+</html>
