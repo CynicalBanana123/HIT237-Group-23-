@@ -23,6 +23,7 @@ The theme our group selected is theme 3 (remote housing crisis). The table below
 
 If a group member does not contribute to the assignment, it is only fair to report their absence to the lecturer or team facilitator, and they should not be awarded with a grade for the assignment. To the group members that do contribute, grades should be awarded equally as it encourages more collaboration among peers to ensure a better grade is achieved.
 
+In the circumstances a group member fails to contribute in a fair manner, the absence of their individual part will be reported to the CLF (Shantanu Barua) as soon as possible, with the member failing to receive a share of the group grade, according to CDU policy. 
 ### Communication
 
 All team communication must be done on MS Teams so that all of the group members can be included in the discussion. This prevents group members from missing out on important information. A weekly team meeting or catch-up is necessary to stay organised and ensure that assignments are getting completed. Since communication is done on MS Teams, weekly team meetings will take place on a MS Teams group call.
@@ -31,14 +32,16 @@ All team communication must be done on MS Teams so that all of the group members
 
 Task ownership will be assigned in the weekly team meetings and will be documented on a MS Teams post. If a group member is behind on their contribution, it is important to check with them and see if the issue can be resolved e.g. requesting an extension. If the situation is more serious, the lecturer should be notified. To be proactive about a member who isn't contributing, it is encouraged to step in and work on their required task as a team, to ensure that the assignment can be submitted on time. 
 
+Members have grade aspirations in mind, aiming for the highest possible grade through timely contributions.
+
 ### Diverse Working Styles
 
 As our group consist of both internal and external students, it is understood that each group member works on a different time schedule. As long as students consistently communicate via MS Teams, and respond to each other  within either a few hours or a day, group tasks will be completed successfully. ***Communication is key***. 
 
 ### Conflict Resolution
+For any group conflict, the group will utilise our facilitator Shantanu Barua (CLF) as the immediate contact for any work issues. This includes unresponsive members, disagreements, or members failing to contribute to their respective section, before raising the issues to the lecturer.
 
-If the group has any conflict, the lecturuer should be contacted. The lecturer can be contacted at [this email address](mailto:yakub.sebastian@cdu.edu.au) via OutLook or through MS Teams. Messages can be sent via LearnLine, however it should be considered that some lecturers don't respond as quickly on that platform.
-
+The lecturer can be contacted at [this email address](mailto:yakub.sebastian@cdu.edu.au) via OutLook or through MS Teams. Messages can be sent via LearnLine, however it should be considered that some lecturers don't respond as quickly on that platform.
 ### Academic Integrity
 
 With the use of AI being so prominent in today's day and age, AI should be disclosed if it is used. CDU acknowledges the use of generative AI in academic work, so while it is allowed, students are still required to demonstrate where and how it is used, and will be marked on the appropriateness of its use. Inappropriate use of AI would include but not be limited to using AI to complete the whole assignment, using it where critical thinking is required instead, or submitted AI work as your own work. 
@@ -55,7 +58,7 @@ Students should document AI contributions through an AI declaration form, if pro
 | Assessment Title | Learning Outcomes | Due Date |
 |---|---|---|
 | Group Project Report 1 | 1,2,3,4,5,6 | 16/04 |
-| Individual Mid-Semester Test | 1,2,5 | N/A |
+| Individual Mid-Semester Test | 1,2,5 | 5/05 |
 | Group Project Report 2 | 1,2,3,4,5,6 | 28/05 |
 
 This table is an overview of the course's assessments and their respective due dates. Since there are two group projects, each milestone will be the completion of each project at their due date. To ensure that each milestone is achieved successfully, it is important to allocate extra time just in case of delays. One approach to have buffer time is to start working on each milestone as soon as possible. This reduces risks and allows time for contingencies. 
@@ -78,10 +81,10 @@ Tasks for each assignment (milestone) will be broken down by people responsible 
 **Group Project Report 1 Task Breakdown**
 | Deliverable | People(s) Responsible |
 |---|---|
-| Django Application| Enter names here |
-| Architectual Design Record | Enter names here |
-| Updated project plan and contract | Enter names here |
-| Supplementary Materials | Enter names here |
+| Django Application|James Trung Minh Hee|
+| Architectual Design Record |Steele Martin|
+| Updated project plan and contract |Luke Pols, Miguel Peachey|
+| Supplementary Materials |Miguel Peachey, Luke Pols|
 
 **Group Project Report 2 Task Breakdown**
 | Deliverable | People(s) Responsible |
