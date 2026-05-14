@@ -1,4 +1,4 @@
-from django.shortcuts import render, redirect
+from django.shortcuts import render, redirect, get_object_or_404
 from django.contrib.auth.decorators import login_required
 from django.contrib import messages
 
@@ -25,13 +25,22 @@ def user_ticket(request):
         form = TicketForm()
 
     tickets = Ticket.objects.filter(created_by=request.user).order_by('-created_at')
-    return render(request, 'tickets/user_ticket.html', {'form': form, 'tickets': tickets})
+    return render(request, 'tickets/user_ticket.html', {
+        'form': form,
+        'tickets': tickets
+    })
 
 
+@login_required
 def ticket_list(request):
-    """Public ticket list (or admin view)."""
-    tickets = Ticket.objects.order_by('-created_at')[:50]
-    return render(request, 'user_tickets/page_tickets.html', {'tickets': tickets})
+    if request.user.is_staff:
+        tickets = Ticket.objects.all().order_by('-created_at')
+    else:
+        tickets = Ticket.objects.filter(created_by=request.user).order_by('-created_at')
+
+    return render(request, 'user_tickets/page_tickets.html', {
+        'tickets': tickets
+    })
 
 
 @login_required
@@ -43,14 +52,24 @@ def create_ticket(request):
             ticket.created_by = request.user
             ticket.save()
             messages.success(request, 'Ticket created successfully.')
-            form = TicketForm()  # reset form after successful save
+            return redirect('tickets:ticket_list')
     else:
         form = TicketForm()
 
     tickets = Ticket.objects.filter(created_by=request.user).order_by('-created_at')
-    return render(request, 'user_tickets/page_tickets_create.html', {'form': form, 'tickets': tickets})
+    return render(request, 'user_tickets/page_tickets_create.html', {
+        'form': form,
+        'tickets': tickets
+    })
 
 
+@login_required
 def ticket_detail(request, id):
-    ticket = Ticket.objects.get(id=id)
-    return render(request, 'user_tickets/page_tickets_detail.html', {'ticket': ticket})
+    if request.user.is_staff:
+        ticket = get_object_or_404(Ticket, id=id)
+    else:
+        ticket = get_object_or_404(Ticket, id=id, created_by=request.user)
+
+    return render(request, 'user_tickets/page_tickets_detail.html', {
+        'ticket': ticket
+    })
