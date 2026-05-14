@@ -1,21 +1,63 @@
 <!doctype html>
 <html lang="en">
-  <head>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>{% block title %}Remote Housing{% endblock %}</title>
-    <style>
-      body { font-family:Arial,Helvetica,sans-serif; margin:2rem; color:#222 }
-      .messages { margin-bottom:1rem }
-      .message { padding:0.6rem; border-radius:4px; margin-bottom:0.4rem }
-      .message.success { background:#e6f4ea; border:1px solid #b7e0c9 }
-    </style>
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>{% block title %}Remote Housing{% endblock %}</title>
+  <style>
+    body {
+      font-family: Arial, Helvetica, sans-serif;
+      margin: 2rem;
+      color: #222
+    }
+
+    .messages {
+      margin-bottom: 1rem
+    }
+
+    .message {
+      padding: 0.6rem;
+      border-radius: 4px;
+      margin-bottom: 0.4rem
+    }
+
+    .message.success {
+      background: #e6f4ea;
+      border: 1px solid #b7e0c9
+    }
+
+    .logout-button {
+      background: transparent;
+      color: #222;
+      border: 1px solid #ccc;
+      padding: 0.4rem 0.8rem;
+      border-radius: 6px;
+      cursor: pointer;
+      font-weight: bold;
+      text-decoration: none;
+    }
+
+    .logout-button:hover {
+      background: #f2f2f2;
+    }
+  </style>
   </head>
   <body>
     <header>
       <h1>Remote Housing</h1>
+      <div style="float:right; display:flex; gap:10px; align-items:center;">
+        {% if request.user.is_staff or request.user.is_superuser %}
+        <span>Admin Account: {{ request.user.username }}</span>
+        {% else %}
+        <span>Account: {{ request.user.username }}</span>
+        {% endif %}
+        <form method="post" action="{% url 'logout' %}" style="display:inline;">
+          {% csrf_token %}
+          <button type="submit" class="logout-button">Logout</button>
+        </form>
+      </div>
     </header>
-
     <div class="messages">
       {% if messages %}
         {% for m in messages %}
