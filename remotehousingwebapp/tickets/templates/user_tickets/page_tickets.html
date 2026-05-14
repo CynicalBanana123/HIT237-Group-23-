@@ -1,5 +1,5 @@
-<!DOCTYPE html>
-<html lang="en">
+{% extends "base.html" %}
+{% block content %}
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
@@ -152,12 +152,6 @@
         <a href="{% url 'tickets:create_ticket' %}">Create Ticket</a>
       </nav>
     </div>
-    <div class="header-right">
-      <form id="logout-form" method="post" action="{% url 'logout' %}">
-        {% csrf_token %}
-        <button type="submit" class="logout-button">Logout</button>
-      </form>
-    </div>
   </header>
 
   <main>
@@ -190,7 +184,7 @@
   </main>
 
   <footer>
-    <p>&copy; 2026 Ticket Management System</p>
+    <p>&copy; 2026 Remote Housing</p>
   </footer>
 </body>
-</html>
+{% endblock %}
