@@ -2,7 +2,7 @@
 
 {% block content %}
   <h2>My Tickets</h2>
-  <p><a href="{% url 'dashboard:home' %}">&larr; Back to dashboard</a></p>
+  <p><a href="{% url 'accounts:home' %}">&larr; Back to dashboard</a></p>
   <p><a href="{% url 'tickets:create' %}">Create new ticket</a></p>
   <ul>
     {% for t in tickets %}

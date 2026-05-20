@@ -2,7 +2,7 @@
 
 {% block content %}
   <h2>Create Ticket</h2>
-  <p><a href="{% url 'dashboard:home' %}">&larr; Back to dashboard</a></p>
+  <p><a href="{% url 'accounts:home' %}">&larr; Back to dashboard</a></p>
   <form method="post">
     {% csrf_token %}
     {{ form.non_field_errors }}

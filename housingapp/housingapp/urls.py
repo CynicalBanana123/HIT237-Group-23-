@@ -18,9 +18,10 @@ from django.contrib import admin
 from django.urls import path, include
 
 urlpatterns = [
-    path('', include('dashboard.urls')),
+    # Root and legacy /dashboard/ now handled by the `accounts` app (dashboard merged)
+    path('', include('accounts.urls')),
     path('admin/', admin.site.urls),
     path('accounts/', include('accounts.urls')),
-    path('dashboard/', include('dashboard.urls')),
+    path('dashboard/', include('accounts.urls')),
     path('tickets/', include('tickets.urls')),
 ]

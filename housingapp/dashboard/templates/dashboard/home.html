@@ -1,7 +1,0 @@
-{% extends "base.html" %}
-
-{% block content %}
-  <h2>{{ greeting }}</h2>
-  <p>Welcome, {{ request.user.get_username }}! Your role: {{ role }}.</p>
-  <p><a href="{% url 'accounts:logout' %}">Logout</a></p>
-{% endblock %}

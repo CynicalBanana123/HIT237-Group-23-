@@ -39,7 +39,7 @@ INSTALLED_APPS = [
     'django.contrib.staticfiles',
     'tickets',
     'accounts',
-    'dashboard',
+    # 'dashboard' merged into 'accounts' - removed
 ]
 
 MIDDLEWARE = [
