@@ -1,0 +1,35 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>HousingApp</title>
+    <style>
+      body { font-family: Arial, sans-serif; max-width: 720px; margin: 2rem auto; padding: 0 1rem; }
+      header { margin-bottom: 1.5rem; }
+      footer { margin-top: 2rem; color: #666; font-size: .9rem }
+      form div { margin-bottom: .75rem }
+      input[type=text], input[type=password] { width: 100%; padding: .5rem; box-sizing: border-box }
+      button { padding: .5rem 1rem }
+    </style>
+  </head>
+  <body>
+    <header>
+      <h1>HousingApp</h1>
+    </header>
+
+    {% if messages %}
+      <ul>
+        {% for message in messages %}
+          <li>{{ message }}</li>
+        {% endfor %}
+      </ul>
+    {% endif %}
+
+    {% block content %}{% endblock %}
+
+    <footer>
+      &copy; {{ now.year }} HousingApp
+    </footer>
+  </body>
+</html>

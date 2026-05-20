@@ -1,0 +1,19 @@
+{% extends "base.html" %}
+
+{% block content %}
+  <h2>Create Ticket</h2>
+  <p><a href="{% url 'dashboard:home' %}">&larr; Back to dashboard</a></p>
+  <form method="post">
+    {% csrf_token %}
+    {{ form.non_field_errors }}
+    <div>
+      {{ form.title.label_tag }}<br>
+      {{ form.title }}
+    </div>
+    <div>
+      {{ form.description.label_tag }}<br>
+      {{ form.description }}
+    </div>
+    <button type="submit">Submit Ticket</button>
+  </form>
+{% endblock %}

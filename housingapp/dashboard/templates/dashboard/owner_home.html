@@ -1,0 +1,21 @@
+{% extends "base.html" %}
+
+{% block content %}
+  <h2>Owner Dashboard</h2>
+  <p>Welcome, {{ user.get_username }} — you have owner privileges.</p>
+  <h3>Recent Tickets</h3>
+  <ul>
+    {% for t in tickets %}
+      <li>{{ t.created_at|date:"Y-m-d H:i" }} — {{ t.title }} by {{ t.created_by.get_username }} ({{ t.status }})</li>
+    {% empty %}
+      <li>No tickets yet.</li>
+    {% endfor %}
+  </ul>
+  <h3>Quick Actions</h3>
+  <ul>
+    <li><a href="#">View properties</a></li>
+    <li><a href="#">Manage tenants</a></li>
+    <li><a href="#">Create listing</a></li>
+  </ul>
+  <p><a href="{% url 'accounts:logout' %}">Logout</a></p>
+{% endblock %}

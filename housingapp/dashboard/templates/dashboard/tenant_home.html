@@ -1,0 +1,12 @@
+{% extends "base.html" %}
+
+{% block content %}
+  <h2>Tenant Dashboard</h2>
+  <p>Welcome, {{ user.get_username }} — here are your active rentals and tickets.</p>
+  <ul>
+    <li><a href="#">View my rentals</a></li>
+    <li><a href="{% url 'tickets:create' %}">Submit a ticket</a></li>
+    <li><a href="#">Profile</a></li>
+  </ul>
+  <p><a href="{% url 'accounts:logout' %}">Logout</a></p>
+{% endblock %}
