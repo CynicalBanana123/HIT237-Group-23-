@@ -1,0 +1,5 @@
+Django>=4.2
+gunicorn
+whitenoise
+# Optional (install if you want the REST API endpoints):
+djangorestframework

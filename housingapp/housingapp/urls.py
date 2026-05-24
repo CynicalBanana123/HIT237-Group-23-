@@ -16,6 +16,13 @@ Including another URLconf
 """
 from django.contrib import admin
 from django.urls import path, include
+from django.urls import path
+
+# Optionally include API routes if REST framework is available
+try:
+    from tickets.api_views import TicketListAPIView  # noqa: E402
+except Exception:
+    TicketListAPIView = None
 
 urlpatterns = [
     # Root and legacy /dashboard/ now handled by the `accounts` app (dashboard merged)
@@ -25,3 +32,9 @@ urlpatterns = [
     path('dashboard/', include('accounts.urls')),
     path('tickets/', include('tickets.urls')),
 ]
+
+if TicketListAPIView is not None:
+    urlpatterns += [
+        path('api/tickets/', TicketListAPIView.as_view(), name='api_ticket_list'),
+    ]
+ 

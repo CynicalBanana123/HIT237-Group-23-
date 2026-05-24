@@ -1,0 +1,28 @@
+{% extends "base.html" %}
+
+{% block content %}
+  <h2>Ticket Details</h2>
+  <p><a href="{% url 'accounts:home' %}">&larr; Back to dashboard</a></p>
+  <h3>{{ ticket.title }}</h3>
+  <p><strong>Status:</strong> {{ ticket.status }}</p>
+  <p><strong>Created:</strong> {{ ticket.created_at|date:"Y-m-d H:i" }} by {{ ticket.created_by.get_username }}</p>
+  <div>
+    <h4>Description</h4>
+    <p>{{ ticket.description|linebreaks }}</p>
+  </div>
+  {% if ticket.created_by == request.user or request.user.profile.role == 'owner' %}
+    <p style="margin-top:1em;">
+      <a href="{% url 'tickets:update' ticket.pk %}">Edit ticket</a>
+    </p>
+    {% if request.user.profile.role == 'owner' %}
+      <form method="post" action="{% url 'tickets:close' ticket.pk %}">
+        {% csrf_token %}
+        <button type="submit">Close Ticket</button>
+      </form>
+    {% endif %}
+    <form method="post" action="{% url 'tickets:delete' ticket.pk %}" style="margin-top:0.5em;">
+      {% csrf_token %}
+      <button type="submit" onclick="return confirm('Delete this ticket?')">Delete ticket</button>
+    </form>
+  {% endif %}
+{% endblock %}

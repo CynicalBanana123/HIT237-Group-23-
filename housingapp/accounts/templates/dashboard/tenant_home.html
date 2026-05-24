@@ -3,6 +3,14 @@
 {% block content %}
   <h2>Tenant Dashboard</h2>
   <p>Welcome, {{ user.get_username }} — here are your active rentals and tickets.</p>
+  <h3>Your Recent Tickets</h3>
+  <ul>
+    {% for t in tickets %}
+      <li><a href="{% url 'tickets:detail' t.pk %}">{{ t.created_at|date:"Y-m-d H:i" }} - {{ t.title }} ({{ t.status }})</a></li>
+    {% empty %}
+      <li>No tickets yet.</li>
+    {% endfor %}
+  </ul>
   <ul>
     <li><a href="#">View my rentals</a></li>
     <li><a href="{% url 'tickets:create' %}">Submit a ticket</a></li>

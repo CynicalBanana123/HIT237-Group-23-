@@ -6,7 +6,7 @@
   <h3>Recent Tickets</h3>
   <ul>
     {% for t in tickets %}
-      <li>{{ t.created_at|date:"Y-m-d H:i" }} — {{ t.title }} by {{ t.created_by.get_username }} ({{ t.status }})</li>
+      <li><a href="{% url 'tickets:detail' t.pk %}">{{ t.created_at|date:"Y-m-d H:i" }} — {{ t.title }} by {{ t.created_by.get_username }} ({{ t.status }})</a></li>
     {% empty %}
       <li>No tickets yet.</li>
     {% endfor %}
@@ -15,7 +15,7 @@
   <ul>
     <li><a href="#">View properties</a></li>
     <li><a href="#">Manage tenants</a></li>
-    <li><a href="#">Create listing</a></li>
+    <li><a href="{% url 'accounts:create_listing' %}">Create listing</a></li>
   </ul>
   <p><a href="{% url 'accounts:logout' %}">Logout</a></p>
 {% endblock %}

@@ -1,3 +1,10 @@
+
+"""Models for the accounts app.
+
+This module defines the `Profile` model which is created automatically
+for each `User` and stores a simple `role` attribute used for permissions.
+"""
+
 from django.db import models
 from django.contrib.auth import get_user_model
 from django.db.models.signals import post_save
@@ -20,6 +27,7 @@ class Profile(models.Model):
 	role = models.CharField(max_length=20, choices=ROLE_CHOICES, default=ROLE_TENANT)
 
 	def __str__(self):
+		"""Return a human-friendly representation including username and role."""
 		return f"{self.user.get_username()} ({self.role})"
 
 

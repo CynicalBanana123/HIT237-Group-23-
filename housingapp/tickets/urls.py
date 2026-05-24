@@ -1,9 +1,15 @@
 from django.urls import path
 from . import views
 
+
 app_name = 'tickets'
 
 urlpatterns = [
-    path('', views.ticket_list, name='list'),
-    path('create/', views.ticket_create, name='create'),
+    path('', views.TicketListView.as_view(), name='list'),
+    path('create/', views.TicketCreateView.as_view(), name='create'),
+    path('<int:pk>/', views.TicketDetailView.as_view(), name='detail'),
+    path('<int:pk>/update/', views.TicketUpdateView.as_view(), name='update'),
+    path('<int:pk>/delete/', views.TicketDeleteView.as_view(), name='delete'),
+    path('<int:pk>/close/', views.close_ticket, name='close'),
 ]
+
