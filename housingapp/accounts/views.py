@@ -16,6 +16,7 @@ from django.http import HttpResponseForbidden
 from django.contrib.auth.forms import UserCreationForm
 from .forms import MixedLoginForm
 from tickets.models import Ticket
+from .models import Profile
 
 
 class OwnerRequiredMixin:
@@ -98,16 +99,15 @@ class SignupView(CreateView):
 	def form_valid(self, form):
 		# save user (don't call super().form_valid which expects a model)
 		user = form.save()
-		# set role if provided
+
+		# set role if provided; deliberately avoid swallowing unexpected errors
 		role = self.request.POST.get('role')
-		try:
-			from .models import Profile
-			profile = user.profile
-			if role in dict(Profile.ROLE_CHOICES):
-				profile.role = role
-				profile.save()
-		except Exception:
-			pass
+		profile, created = Profile.objects.get_or_create(user=user)
+
+		if role in dict(Profile.ROLE_CHOICES):
+			profile.role = role
+			profile.save()
+
 		auth_login(self.request, user)
 		return redirect(reverse('accounts:home'))
 

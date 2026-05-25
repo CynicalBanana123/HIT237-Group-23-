@@ -1,0 +1,78 @@
+from transformers import pipeline
+from transformers import AutoTokenizer
+from transformers import AutoModelForCausalLM
+
+texts = [
+"The new policy will reduce emissions by 40% over five years",
+"Scientists warn climate models underestimate feedback loops",
+"Renewable energy costs dropped below fossil fuels in Q3",
+"Protesters demand immediate carbon tax implementation",
+"Study finds urban heat islands increase 2°C above rural areas",
+"Government rejects binding emissions targets at summit"
+]
+
+labels = [0, 1, 0, 2, 1, 2] # 0: Policy Announcement, 1: Scientific Finding, 2: Political Action
+
+
+# --------------------------------------------------
+# Task 1: Classification using BART
+# --------------------------------------------------
+
+candidate_labels = [
+    "policy announcement",
+    "scientific finding",
+    "political action"
+]
+
+classifier = pipeline(
+    "zero-shot-classification",
+    model="facebook/bart-large-mnli"
+)
+
+predictions_list = []
+
+# Classify first 3 texts only
+for i in range(3):
+    result = classifier(texts[i], candidate_labels)
+    predictions_list.append(result)
+
+# Print predicted label for text index 1 only
+print("Predicted label for text index 1:", predictions_list[1]["labels"][0])
+
+
+# --------------------------------------------------
+# Task 2: Prompting with GPT-2
+# --------------------------------------------------
+
+tokenizer = AutoTokenizer.from_pretrained("gpt2")
+model = AutoModelForCausalLM.from_pretrained("gpt2")
+
+prompt = f"""
+Text: {texts[0]}
+Category: policy announcement
+
+Text: {texts[5]}
+Category: political action
+
+Text: {texts[4]}
+Category:
+"""
+
+inputs = tokenizer(prompt, return_tensors="pt")
+
+output = model.generate(
+    **inputs,
+    max_new_tokens=10,
+    temperature=0.1,
+    do_sample=True,
+    pad_token_id=tokenizer.eos_token_id
+)
+
+# Decode only the newly generated text
+generated_tokens = output[0][inputs["input_ids"].shape[1]:]
+generated_text = tokenizer.decode(generated_tokens, skip_special_tokens=True)
+
+# Extract only the generated category name
+prediction_fewshot = generated_text.strip().split("\n")[0]
+
+print("Prediction for text index 4:", prediction_fewshot)
