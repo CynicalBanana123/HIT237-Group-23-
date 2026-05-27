@@ -82,20 +82,46 @@ Tasks for each assignment (milestone) will be broken down by people responsible 
 | Deliverable | People(s) Responsible |
 |---|---|
 | Django Application|James Trung Minh Hee|
-| Architectual Design Record |Steele Martin|
+| Architectural Design Record |Steele Martin|
 | Updated project plan and contract |Luke Pols, Miguel Peachey|
 | Supplementary Materials |Miguel Peachey, Luke Pols|
 
 **Group Project Report 2 Task Breakdown**
 | Deliverable | People(s) Responsible |
 |---|---|
-| Extended Django Application| Enter names here |
-| Updated Architectual Design Record | Enter names here |
-| Test Suite | Enter names here |
-| Updated project plan and contract| Enter names here |
-| Updated Supplementary Materials | Enter names here |
+| Extended Django Application|James Trung Minh Hee|
+| Updated Architectural Design Record |Steele Martin, James Trung Minh Hee, Luke Pols|
+| Test Suite |James Trung Minh Hee|
+| Updated project plan and contract|Luke Pols|
+| Updated Supplementary Materials |Luke Pols|
 
 After an MS Team's meeting discussing report 1, students will be assigned to tackle each deliverable based on their strengths and weaknesses and their names will be entered in the table - the same applies to report 2 and its respective table. 
+
+### Project Evolution and Architectural Changes
+The project evolved significantly from our Group Report 1. Following lecturer feedback, improvements were developed regarding object oriented design, architectural consistency and the overall documentation quality.
+
+The application itself was restructured to improve various concerns from the last report, with changes to the implemented system as a whole. The Architectural Decision Records (ADRs) were expanded upon and effectively changed. Major Architectural decisions and changes included a range of considerations such as: 
+
+• Introduction of a service layer, this way business logic was separated from the views.
+ 
+• Several function based views were converted into the proper class-based views (CBVs).
+  
+• Django authentication and role based access control was implemented.
+   
+• Addition of custom handling for business rule validations.
+    
+• Expansion upon the projects testing and test suite to cover not only models, but services, views and permissions.
+     
+• Ticket and property relationships were updated to improve the consistency across data and the domain modelling entirely.
+      
+• ERDs, class diagrams and supplementary materials were promptly updated to reflect the architecture revision.
+       
+• Both the Git workflow and repository structure were improved to better support collaborative development, improving upon the 1st Group Report.
+
+The ADR documentation was revised to demonstrate how previous architectural decisions evolved throughout development of the project. Decisions were retained and are accordingly preserved for traceability between relevant implementations. 
+
+### Version Control and Collaboration
+For this project, GitHub was used to our advantage for not only version control, but collaborative development as well. Members were able to contribute their work through various commits and pushes, with repository updates regularly occurring across the projects lifecycle as a whole. Git history was used to track the evolution of the architectural development, with implementation featured through the documentations updates between Group Project Report 1 and Group Project Report 2. Branches and commits were used to maintain development consistency and support the integration of new features, testing and architectural improvements. Branches effectively separated changes regarding the project, creating multiple histories or timestamps of work and contributions. 
 
 ### Checkpoints
 
