@@ -1,5 +1,5 @@
 # HIT237-Group-23-
-
+Architectural Decision Records (ADRs) can be found in the ADR's/ folder.
 ## Deployment notes
 
 Before deploying, set the following environment variables on your host:
