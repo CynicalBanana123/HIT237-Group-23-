@@ -3,7 +3,7 @@
 ## 31/03/2026 Revision:
 
 ### Status:
-Approved
+Superseded (MyGov integration replaced with built in Django authentication and role-based profiles), see ADR-005
 
 ### Context
 To prevent service abuse or requests from being misattributed, mechanisms for identifying users and granting them relevant access must be implemented.
